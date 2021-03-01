@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import CreatePost from '../Components/CreatePost';
+import CreatePost from '../Components/CreatePost.js';
 import { useState, useEffect } from 'react';
 import fire from '../config/fire-config';
 import Link from 'next/link';
