@@ -3,6 +3,7 @@ import CreatePost from '../components/CreatePost.js';
 import { useState, useEffect } from 'react';
 import fire from '../config/fire-config';
 import Link from 'next/link';
+import Navbar from '../components/Navbar.js';
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
@@ -43,17 +44,7 @@ const Home = () => {
 
   return (
     <div>
-      <nav style={{height: "30px", background: "red", borderBottom: "1px solid black",}}>
-        {!loggedIn && (
-          <div>
-            <Link href="/users/register">
-              <a>Register</a>
-            </Link> |
-            <Link href="/users/login">
-              <a> Login</a>
-            </Link>
-          </div>)}
-      </nav>
+      <Navbar loggedIn={loggedIn}/>
       <Head>
         <title>Blog App</title>
       </Head>
