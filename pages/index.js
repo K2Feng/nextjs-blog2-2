@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Layout, { siteTitle } from '../components/layout';
 import CreatePost from '../components/CreatePost.js';
 import { useState, useEffect } from 'react';
 import fire from '../config/fire-config';
@@ -45,6 +46,7 @@ const Home = () => {
   return (
     <div>
       <Navbar loggedIn={loggedIn}/>
+      <Layout home>
       <Head>
         <title>Blog App</title>
       </Head>
@@ -63,16 +65,35 @@ const Home = () => {
         :
           <button onClick={handleLogout}>Logout</button>
       }
-      <ul>
+    <div className='grid'>
         {blogs.map(blog =>
-          <li key={blog.id}>
+          <li key={blog.id} className='item'>
             <Link href="/blog/[id]" as={'/blog/' + blog.id}>
               <a>{blog.title}</a>
             </Link>
+            <p>{blog.content}</p>
           </li>
         )}
-      </ul>
+      <style jsx>{`
+        .grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          color: #fff;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-right: 5px;
+          padding-left: 5px;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+        }
+        .item {
+          background-color: hsla(0, 100%, 30%, 0.15);
+          margin: 10px;
+        }
+      `}</style>
+    </div>
       {loggedIn && <CreatePost />}
+      </Layout>
     </div>
   )
 }

@@ -1,19 +1,18 @@
 .navbar {
+  height: 40px;
   display: flex;
+  background-color: hsla(0, 100%, 30%, 0.15);
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 2.5rem;
   position: absolute;
   z-index: 1;
   width: 100%;
 }
 
 .navbarSticky {
-  background: #333;
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 1px 1px 1px #222;
   animation: moveDown 0.5s ease-in-out;
 }
 
@@ -31,7 +30,6 @@
 }
 
 .navbarLink {
-  display: flex;
   list-style: none;
 }
 
