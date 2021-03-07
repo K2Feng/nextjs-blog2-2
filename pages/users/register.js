@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import fire from '../../config/fire-config';
 import { useRouter } from 'next/router';
+import Layout from '../../components/layout';
 
 const Register = () => {
   const router = useRouter();
@@ -32,6 +33,7 @@ const Register = () => {
   }
 
   return(
+    <Layout>
     <div>
       <h1>Create new user</h1>
       {notification}
@@ -48,6 +50,7 @@ const Register = () => {
         <button type="submit">Login</button>
       </form>
     </div>
+    </Layout>
   )
 }
 

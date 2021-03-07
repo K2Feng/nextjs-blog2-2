@@ -50,16 +50,15 @@ const Home = () => {
       <Head>
         <title>Blog App</title>
       </Head>
-      <h1>Blog</h1>
       {notification}
       {!loggedIn
         ?
           <div>
           <Link href="/users/register">
             <a>Register</a>
-          </Link> |
+          </Link>
           <Link href="/users/login">
-            <a> Login</a>
+            <a>  Login</a>
           </Link>
           </div>
         :
@@ -85,6 +84,7 @@ const Home = () => {
           padding-left: 5px;
           border-top: 1px solid black;
           border-bottom: 1px solid black;
+          margin-top: 20px;
         }
         .item {
           background-color: hsla(0, 100%, 30%, 0.15);
