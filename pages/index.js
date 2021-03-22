@@ -45,25 +45,13 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar loggedIn={loggedIn}/>
+      <Navbar loggedIn={loggedIn} handleLogout={handleLogout}/>
       <Layout home>
       <Head>
         <title>Blog App</title>
       </Head>
       {notification}
-      {!loggedIn
-        ?
-          <div>
-          <Link href="/users/register">
-            <a>Register</a>
-          </Link>
-          <Link href="/users/login">
-            <a>  Login</a>
-          </Link>
-          </div>
-        :
-          <button onClick={handleLogout}>Logout</button>
-      }
+    {loggedIn && <CreatePost />}
     <div className='grid'>
         {blogs.map(blog =>
           <li key={blog.id} className='item'>
@@ -92,7 +80,6 @@ const Home = () => {
         }
       `}</style>
     </div>
-      {loggedIn && <CreatePost />}
       </Layout>
     </div>
   )

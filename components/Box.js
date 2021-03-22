@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useFrame } from 'react-three-fiber'
 import { useThree } from 'react-three-fiber';
+
 function Box(props) {
   // This reference will give us direct access to the mesh
   const mesh = useRef()
@@ -10,9 +11,9 @@ function Box(props) {
   const [active, setActive] = useState(false)
 
   // Rotate mesh every frame, this is outside of React without overhead
-  useFrame(() => {
-    mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-  })
+ // useFrame(() => {
+ //   mesh.current.rotation.x = mesh.current.rotation.y += 0.01
+ // })
 
   return (
     <mesh

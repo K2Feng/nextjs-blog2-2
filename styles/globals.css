@@ -1,3 +1,7 @@
+:root {
+  --linkOrange: #b38627;
+}
+
 html,
 body {
   padding: 0;
@@ -44,18 +48,16 @@ button:hover{
      color: white;
      transform: rotateX(-20deg);
  }
-:root {
-  --linkBlue: #b38627;
-}
 
 a {
-  color: var(--linkBlue);
+  color: var(--linkOrange);
   display: inline-block;
   position: relative;
   text-decoration: none;
+  margin-left: 1rem;
 }
 a::before {
-    background-color: var(--linkBlue);
+    background-color: var(--linkOrange);
     content: '';
     height: 1px;
     position: absolute;

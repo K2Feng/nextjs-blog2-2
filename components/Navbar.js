@@ -2,18 +2,24 @@ import React from 'react';
 import navStyle from './Navbar.module.css';
 import Link from 'next/link';
 
-const Navbar = ({loggedIn}) => {
+const Navbar = ({loggedIn, handleLogout}) => {
+
   return (
     <nav className={`${navStyle.navbar} ${navStyle.navbarSticky}`}>
-      {!loggedIn && (
-        <ul className={navStyle.navbarLink}>
-          <Link className={navStyle.navbarLinkItem} href="/users/register">
-            Register
-          </Link> {` | `}
-          <Link className={navStyle.navbarLinkItem} href="/users/login">
-             Login
-          </Link>
-        </ul>)}
+      {!loggedIn 
+        ?
+          <ul className={navStyle.navbarLink}>
+            <Link className={navStyle.navbarLinkItem} href="/users/register">
+              Register
+            </Link>
+            {` | `}
+            <Link className={navStyle.navbarLinkItem} href="/users/login">
+               Login
+            </Link>
+          </ul>
+        :
+          <a onClick={handleLogout}>Logout</a>
+      }
     </nav>
   )
 }
