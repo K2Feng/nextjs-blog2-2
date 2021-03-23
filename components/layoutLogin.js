@@ -161,7 +161,7 @@ export default function Layout({ children, home }) {
                 }} >
 
           <Lights />
-          <ThreeGroup castShadow/>
+    {`<ThreeGroup castShadow/>`}
           <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 0]} receiveShadow material={shadowMaterial}>
               <boxBufferGeometry attach="geometry" args={[200, 200, 0.1]} />
           </mesh>
