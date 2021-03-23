@@ -5,7 +5,6 @@ import utilStyles from '../styles/utils.module.css'
 import { bgWrap } from '../styles/styles.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import ThreeGroup from './ThreeGroup';
 import { Canvas, extend, useFrame, useThree } from 'react-three-fiber';
 import * as THREE from 'three';
 import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls';
