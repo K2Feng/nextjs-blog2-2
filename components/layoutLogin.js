@@ -12,6 +12,7 @@ import { useLoader } from 'react-three-fiber'
 //import { useGLTF } from '@react-three/drei/core/useGLTF'
 //import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import LoadedModel from './LoadedModel.js';
+import threeGroup from './threeGroup.js';
 
 const name = '[Feng Liu]'
 export const siteTitle = 'Next.js fengliu'
@@ -160,7 +161,7 @@ export default function Layout({ children, home }) {
                 }} >
 
           <Lights />
-    {`<ThreeGroup castShadow/>`}
+          <ThreeGroup castShadow/>
           <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 0]} receiveShadow material={shadowMaterial}>
               <boxBufferGeometry attach="geometry" args={[200, 200, 0.1]} />
           </mesh>
