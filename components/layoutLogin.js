@@ -12,7 +12,7 @@ import { useLoader } from 'react-three-fiber'
 //import { useGLTF } from '@react-three/drei/core/useGLTF'
 //import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import LoadedModel from './LoadedModel.js';
-import threeGroup from './threeGroup.js';
+import ThreeGroup from './threeGroup.js';
 
 const name = '[Feng Liu]'
 export const siteTitle = 'Next.js fengliu'

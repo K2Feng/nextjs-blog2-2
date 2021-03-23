@@ -10,4 +10,4 @@ function ThreeGroup(props) {
   )
 }
 
-export default Box;
+export default ThreeGroup;
